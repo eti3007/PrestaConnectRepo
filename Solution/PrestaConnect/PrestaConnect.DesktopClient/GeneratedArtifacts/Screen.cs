@@ -10,6 +10,253 @@
 namespace LightSwitchApplication
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class CreateNewLocalisation
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private CreateNewLocalisation() : base("LightSwitchApplication.PrestaConnect.DesktopClient:CreateNewLocalisation")
+        {
+            global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static CreateNewLocalisation CreateInstance()
+        {
+            return new global::LightSwitchApplication.CreateNewLocalisation(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreateNewLocalisation_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void LocalisationProperty_Changed();
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Localisation LocalisationProperty
+        {
+            get 
+            {
+                return global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.GetValue(this, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty);
+            }
+            set
+            {
+                global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.SetValue(this, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LocalisationProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySet, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.CommandSet, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>.Entry
+                __CreateNewLocalisationEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>.Entry(
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSavingEvent,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSavedEvent,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeClosingEvent,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeCreated,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeActivated,
+                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSaveErrorEvent);
+            private static void __CreateNewLocalisation_InvokeInitializeDataWorkspace(global::LightSwitchApplication.CreateNewLocalisation s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.CreateNewLocalisation_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __CreateNewLocalisation_InvokeSavingEvent(global::LightSwitchApplication.CreateNewLocalisation s)
+            {
+                bool handled = false;
+                s.CreateNewLocalisation_Saving(ref handled);
+                return handled;
+            }
+            private static void __CreateNewLocalisation_InvokeSavedEvent(global::LightSwitchApplication.CreateNewLocalisation s)
+            {
+                s.CreateNewLocalisation_Saved();
+            }
+            private static bool __CreateNewLocalisation_InvokeClosingEvent(global::LightSwitchApplication.CreateNewLocalisation s)
+            {
+                bool cancel = false;
+                s.CreateNewLocalisation_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __CreateNewLocalisation_InvokeCreated(global::LightSwitchApplication.CreateNewLocalisation s)
+            {
+                s.CreateNewLocalisation_Created();
+            }
+            private static void __CreateNewLocalisation_InvokeActivated(global::LightSwitchApplication.CreateNewLocalisation s)
+            {
+                s.CreateNewLocalisation_Activated();
+            }
+            private static bool __CreateNewLocalisation_InvokeSaveErrorEvent(global::LightSwitchApplication.CreateNewLocalisation s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.CreateNewLocalisation_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Data _LocalisationProperty;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation> LocalisationProperty
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>)base.GetItem(global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Entry
+                    LocalisationProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Entry(
+                        "LocalisationProperty",
+                        false,
+                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_Stub,
+                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_Validate,
+                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_OnValueChanged);
+                private static void _LocalisationProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Data> c, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass d, object sf)
+                {
+                    c(d, ref d._LocalisationProperty, sf);
+                }
+                private static void _LocalisationProperty_Validate(global::LightSwitchApplication.CreateNewLocalisation s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.LocalisationProperty_Validate(r);
+                }
+                private static void _LocalisationProperty_OnValueChanged(global::LightSwitchApplication.CreateNewLocalisation s)
+                {
+                    s.LocalisationProperty_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     public sealed partial class CreateNewZone
         : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.CreateNewZone, global::LightSwitchApplication.CreateNewZone.DetailsClass>
     {
@@ -677,253 +924,6 @@ namespace LightSwitchApplication
                     d.Screen.ZoneListAddAndEditNew_Execute();
                 }
 
-            }
-        }
-    }
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class CreateNewLocalisation
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
-    {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private CreateNewLocalisation() : base("LightSwitchApplication.PrestaConnect.DesktopClient:CreateNewLocalisation")
-        {
-            global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.Initialize(this);
-        }
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static CreateNewLocalisation CreateInstance()
-        {
-            return new global::LightSwitchApplication.CreateNewLocalisation(
-            );
-        }
-
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_Created();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_Activated();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_Saving(ref bool handled);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_Saved();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_Closing(ref bool cancel);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CreateNewLocalisation_SaveError(global::System.Exception exception, ref bool handled);
-     
-        #region Private Properties
-        
-        /// <summary>
-        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.Application Application
-        {
-            get
-            {
-                return global::LightSwitchApplication.Application.Current;
-            }
-        }
-        
-        /// <summary>
-        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.DataWorkspace DataWorkspace
-        {
-            get
-            {
-                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
-            }
-        }
-        
-        #endregion
- 
-        partial void LocalisationProperty_Changed();
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Localisation LocalisationProperty
-        {
-            get 
-            {
-                return global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.GetValue(this, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty);
-            }
-            set
-            {
-                global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.SetValue(this, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LocalisationProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySet, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.CommandSet, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.MethodSet>
-        {
-
-            static DetailsClass()
-            {
-                var initializePropertyEntry = global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty;
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>.Entry
-                __CreateNewLocalisationEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>.Entry(
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSavingEvent,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSavedEvent,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeClosingEvent,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeCreated,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeActivated,
-                    global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.__CreateNewLocalisation_InvokeSaveErrorEvent);
-            private static void __CreateNewLocalisation_InvokeInitializeDataWorkspace(global::LightSwitchApplication.CreateNewLocalisation s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
-            {
-                s.CreateNewLocalisation_InitializeDataWorkspace(saveChangesTo);
-            }
-            private static bool __CreateNewLocalisation_InvokeSavingEvent(global::LightSwitchApplication.CreateNewLocalisation s)
-            {
-                bool handled = false;
-                s.CreateNewLocalisation_Saving(ref handled);
-                return handled;
-            }
-            private static void __CreateNewLocalisation_InvokeSavedEvent(global::LightSwitchApplication.CreateNewLocalisation s)
-            {
-                s.CreateNewLocalisation_Saved();
-            }
-            private static bool __CreateNewLocalisation_InvokeClosingEvent(global::LightSwitchApplication.CreateNewLocalisation s)
-            {
-                bool cancel = false;
-                s.CreateNewLocalisation_Closing(ref cancel);
-                return cancel;
-            }
-            private static void __CreateNewLocalisation_InvokeCreated(global::LightSwitchApplication.CreateNewLocalisation s)
-            {
-                s.CreateNewLocalisation_Created();
-            }
-            private static void __CreateNewLocalisation_InvokeActivated(global::LightSwitchApplication.CreateNewLocalisation s)
-            {
-                s.CreateNewLocalisation_Activated();
-            }
-            private static bool __CreateNewLocalisation_InvokeSaveErrorEvent(global::LightSwitchApplication.CreateNewLocalisation s, global::System.Exception ex)
-            {
-                bool handled = false;
-                s.CreateNewLocalisation_SaveError(ex, ref handled);
-                return handled;
-            }
-
-            public DetailsClass() : base()
-            {
-            }
-
-            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySet Properties
-            {
-                get
-                {
-                    return base.Properties;
-                }
-            }
-
-            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.CommandSet Commands
-            {
-                get
-                {
-                    return base.Commands;
-                }
-            }
-
-            public new global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.MethodSet Methods
-            {
-                get
-                {
-                    return base.Methods;
-                }
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Data _LocalisationProperty;
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
-            {
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation> LocalisationProperty
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>)base.GetItem(global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties.LocalisationProperty);
-                    }
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class PropertySetProperties
-            {
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Entry
-                    LocalisationProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Entry(
-                        "LocalisationProperty",
-                        false,
-                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_Stub,
-                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_Validate,
-                        global::LightSwitchApplication.CreateNewLocalisation.DetailsClass.PropertySetProperties._LocalisationProperty_OnValueChanged);
-                private static void _LocalisationProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.CreateNewLocalisation, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass, global::LightSwitchApplication.Localisation>.Data> c, global::LightSwitchApplication.CreateNewLocalisation.DetailsClass d, object sf)
-                {
-                    c(d, ref d._LocalisationProperty, sf);
-                }
-                private static void _LocalisationProperty_Validate(global::LightSwitchApplication.CreateNewLocalisation s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.LocalisationProperty_Validate(r);
-                }
-                private static void _LocalisationProperty_OnValueChanged(global::LightSwitchApplication.CreateNewLocalisation s)
-                {
-                    s.LocalisationProperty_Changed();
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class CommandSetProperties
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class MethodSetProperties
-            {
             }
         }
     }

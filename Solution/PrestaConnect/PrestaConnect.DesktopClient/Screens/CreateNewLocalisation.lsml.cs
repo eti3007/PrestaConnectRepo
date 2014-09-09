@@ -20,6 +20,12 @@ namespace LightSwitchApplication
 
         partial void CreateNewLocalisation_Saved()
         {
+            string key = "AhspMjoAQNhoVJsWeV1mh6M2WBL5m_vYakI5qLXrXoR6vu5DlJjvZCdvIg82aeZU";
+            HttpBingMap objBing = new HttpBingMap(key, "35 bis avenue Jean Jaurès 91230 Crosne, FRANCE");
+            objBing.GetResponse();
+
+
+
             // Write your code here.
             this.Close(false);
             Application.Current.ShowDefaultScreen(this.LocalisationProperty);
