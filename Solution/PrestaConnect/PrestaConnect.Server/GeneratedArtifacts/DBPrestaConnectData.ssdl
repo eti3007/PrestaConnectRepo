@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DBPrestaConnectDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBPrestaConnectDataStore">
+    <EntitySet Name="Clients" EntityType="DBPrestaConnectDataStore.Client" store:Type="Tables" Schema="dbo" Table="Client" />
+    <EntitySet Name="Interventions" EntityType="DBPrestaConnectDataStore.Intervention" store:Type="Tables" Schema="dbo" Table="Intervention" />
+    <EntitySet Name="Localisations" EntityType="DBPrestaConnectDataStore.Localisation" store:Type="Tables" Schema="dbo" Table="Localisation" />
+    <EntitySet Name="Prestataires" EntityType="DBPrestaConnectDataStore.Prestataire" store:Type="Tables" Schema="dbo" Table="Prestataire" />
+    <EntitySet Name="Zones" EntityType="DBPrestaConnectDataStore.Zone" store:Type="Tables" Schema="dbo" Table="Zone" />
+    <AssociationSet Name="FK_Intervention_ToClient" Association="DBPrestaConnectDataStore.FK_Intervention_ToClient">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Intervention" EntitySet="Interventions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ToLocalisation" Association="DBPrestaConnectDataStore.FK_Client_ToLocalisation">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestataire_ToLocalisation" Association="DBPrestaConnectDataStore.FK_Prestataire_ToLocalisation">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Prestataire" EntitySet="Prestataires" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zone_ToLocalisationNO" Association="DBPrestaConnectDataStore.FK_Zone_ToLocalisationNO">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Zone" EntitySet="Zones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zone_ToLocalisationSE" Association="DBPrestaConnectDataStore.FK_Zone_ToLocalisationSE">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Zone" EntitySet="Zones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Intervention_ToPrestataire" Association="DBPrestaConnectDataStore.FK_Intervention_ToPrestataire">
+      <End Role="Prestataire" EntitySet="Prestataires" />
+      <End Role="Intervention" EntitySet="Interventions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ToZone" Association="DBPrestaConnectDataStore.FK_Client_ToZone">
+      <End Role="Zone" EntitySet="Zones" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Localisation" Type="int" Nullable="false" />
+    <Property Name="Zone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Intervention">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DateDebut" Type="date" Nullable="false" />
+    <Property Name="DateFin" Type="date" />
+    <Property Name="Poste" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Client" Type="int" Nullable="false" />
+    <Property Name="Prestataire" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localisation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="nvarchar" Nullable="false" MaxLength="9" />
+    <Property Name="Longitude" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="AdresseComplete" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Prestataire">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Prenom" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailPro" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailPerso" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="CompteSkype" Type="nvarchar" MaxLength="50" />
+    <Property Name="Localisation" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LocalisationNO" Type="int" Nullable="false" />
+    <Property Name="LocalisationSE" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Intervention_ToClient">
+    <End Role="Client" Type="DBPrestaConnectDataStore.Client" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Intervention" Type="DBPrestaConnectDataStore.Intervention" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Intervention">
+        <PropertyRef Name="Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ToLocalisation">
+    <End Role="Localisation" Type="DBPrestaConnectDataStore.Localisation" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Client" Type="DBPrestaConnectDataStore.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Localisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestataire_ToLocalisation">
+    <End Role="Localisation" Type="DBPrestaConnectDataStore.Localisation" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Prestataire" Type="DBPrestaConnectDataStore.Prestataire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prestataire">
+        <PropertyRef Name="Localisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zone_ToLocalisationNO">
+    <End Role="Localisation" Type="DBPrestaConnectDataStore.Localisation" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Zone" Type="DBPrestaConnectDataStore.Zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zone">
+        <PropertyRef Name="LocalisationNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zone_ToLocalisationSE">
+    <End Role="Localisation" Type="DBPrestaConnectDataStore.Localisation" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Zone" Type="DBPrestaConnectDataStore.Zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zone">
+        <PropertyRef Name="LocalisationSE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Intervention_ToPrestataire">
+    <End Role="Prestataire" Type="DBPrestaConnectDataStore.Prestataire" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Intervention" Type="DBPrestaConnectDataStore.Intervention" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestataire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Intervention">
+        <PropertyRef Name="Prestataire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ToZone">
+    <End Role="Zone" Type="DBPrestaConnectDataStore.Zone" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Client" Type="DBPrestaConnectDataStore.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zone">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Zone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

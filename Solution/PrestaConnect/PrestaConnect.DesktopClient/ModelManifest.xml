@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Client.lsml" Checksum="884F540036FD1F81B3F0E374B9F7E5608671B1AC783B0A64F2CF1340AB4D5371" />
+    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Proxies.lsml" Checksum="5515037DE5C2EF98841E07BA1CB1F4469DCE859279B8EE138D85A8A47C9D5610" />
+    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewZone.lsml" Checksum="EA5D760DCFB09F00C119842A29D51893754248AA2A8EAD12A8ECF6EB5BFA811C" />
+    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListDetailZone.lsml" Checksum="6DE62AAFF6DE854F459F89889EE80BF9410053E8B23CFD303E5C69C64D32F7C6" />
+    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewLocalisation.lsml" Checksum="28616B84255D6DF2F31B486FD93B681170648FE11D83CF1FA64E30D7B6AE64F7" />
+  </Documents>
+</ModelDocumentManifest>

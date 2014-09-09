@@ -1,0 +1,7 @@
+PrestaConnect.Server.Properties.Service.lsml
+PrestaConnect.Server.DataSources.DBPrestaConnectData.Clients.lsml
+PrestaConnect.Server.DataSources.DBPrestaConnectData.Interventions.lsml
+PrestaConnect.Server.DataSources.DBPrestaConnectData.Localisations.lsml
+PrestaConnect.Server.DataSources.DBPrestaConnectData.Prestataires.lsml
+PrestaConnect.Server.DataSources.DBPrestaConnectData.Zones.lsml
+PrestaConnect.Server.Properties.DataSources.DBPrestaConnectData.lsml

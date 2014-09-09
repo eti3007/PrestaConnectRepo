@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Localisation">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Latitude"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="9" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Longitude"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AdresseComplete"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Clients"
+        Association="FK_Client_ToLocalisation"
+        FromEnd="Localisation"
+        ToEnd="Client" />
+      <NavigationProperty
+        Name="Prestataires"
+        Association="FK_Prestataire_ToLocalisation"
+        FromEnd="Localisation"
+        ToEnd="Prestataire" />
+      <NavigationProperty
+        Name="Zones"
+        Association="FK_Zone_ToLocalisationNO"
+        FromEnd="Localisation"
+        ToEnd="Zone" />
+      <NavigationProperty
+        Name="Zones1"
+        Association="FK_Zone_ToLocalisationSE"
+        FromEnd="Localisation"
+        ToEnd="Zone" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Client_ToLocalisation">
+    <AssociationEnd
+      Name="Localisation"
+      Multiplicity="One"
+      EntityType="Localisation">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Client"
+      Multiplicity="Many"
+      EntityType="Client" />
+  </Association>
+  <Association
+    Name="FK_Prestataire_ToLocalisation">
+    <AssociationEnd
+      Name="Localisation"
+      Multiplicity="One"
+      EntityType="Localisation">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Prestataire"
+      Multiplicity="Many"
+      EntityType="Prestataire" />
+  </Association>
+  <Association
+    Name="FK_Zone_ToLocalisationNO">
+    <AssociationEnd
+      Name="Localisation"
+      Multiplicity="One"
+      EntityType="Localisation">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Zone"
+      Multiplicity="Many"
+      EntityType="Zone" />
+  </Association>
+  <Association
+    Name="FK_Zone_ToLocalisationSE">
+    <AssociationEnd
+      Name="Localisation"
+      Multiplicity="One"
+      EntityType="Localisation">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Zone"
+      Multiplicity="Many"
+      EntityType="Zone" />
+  </Association>
+  <EntityContainer
+    Name="DBPrestaConnectData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Localisations"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Localisation" />
+    <AssociationSet
+      Name="FK_Client_ToLocalisation"
+      Association="FK_Client_ToLocalisation">
+      <AssociationSetEnd
+        Name="Localisation"
+        EntitySet="Localisations" />
+      <AssociationSetEnd
+        Name="Client"
+        EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Prestataire_ToLocalisation"
+      Association="FK_Prestataire_ToLocalisation">
+      <AssociationSetEnd
+        Name="Localisation"
+        EntitySet="Localisations" />
+      <AssociationSetEnd
+        Name="Prestataire"
+        EntitySet="Prestataires" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Zone_ToLocalisationNO"
+      Association="FK_Zone_ToLocalisationNO">
+      <AssociationSetEnd
+        Name="Localisation"
+        EntitySet="Localisations" />
+      <AssociationSetEnd
+        Name="Zone"
+        EntitySet="Zones" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Zone_ToLocalisationSE"
+      Association="FK_Zone_ToLocalisationSE">
+      <AssociationSetEnd
+        Name="Localisation"
+        EntitySet="Localisations" />
+      <AssociationSetEnd
+        Name="Zone"
+        EntitySet="Zones" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Localisations_Single"
+      ReturnType="Localisation">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Localisations" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Localisations_SingleOrDefault"
+      ReturnType="Localisation">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Localisations" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DBPrestaConnectDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Localisations">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Localisation" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Localisation/Properties[Id]" />
+        <SsdlProperty
+          MaxLength="9"
+          Name="Latitude"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Localisation/Properties[Latitude]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Longitude"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Localisation/Properties[Longitude]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="AdresseComplete"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Localisation/Properties[AdresseComplete]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Client_ToLocalisation">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Client_ToLocalisation" />
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Client_ToLocalisation]/Members[Localisation]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Client_ToLocalisation]/Members[Client]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Localisation" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Prestataire_ToLocalisation">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Prestataire_ToLocalisation" />
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Prestataire_ToLocalisation]/Members[Localisation]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Prestataire_ToLocalisation]/Members[Prestataire]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Localisation" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Zone_ToLocalisationNO">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Zone_ToLocalisationNO" />
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Zone_ToLocalisationNO]/Members[Localisation]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Zone_ToLocalisationNO]/Members[Zone]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="LocalisationNO" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Zone_ToLocalisationSE">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Zone_ToLocalisationSE" />
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Zone_ToLocalisationSE]/Members[Localisation]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Zone_ToLocalisationSE]/Members[Zone]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="LocalisationSE" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

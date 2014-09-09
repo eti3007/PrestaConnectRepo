@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Localisation" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Zone" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Localisation1" Relationship="LightSwitchApplication.FK_Client_ToLocalisation" ToRole="Localisation" FromRole="Client" />
+    <NavigationProperty Name="Zone1" Relationship="LightSwitchApplication.FK_Client_ToZone" ToRole="Zone" FromRole="Client" />
+    <NavigationProperty Name="Interventions" Relationship="LightSwitchApplication.FK_Intervention_ToClient" ToRole="Intervention" FromRole="Client" />
+  </EntityType>
+  <EntityType Name="Intervention">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateDebut" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="DateFin" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Poste" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Client" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Prestataire" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Client1" Relationship="LightSwitchApplication.FK_Intervention_ToClient" ToRole="Client" FromRole="Intervention" />
+    <NavigationProperty Name="Prestataire1" Relationship="LightSwitchApplication.FK_Intervention_ToPrestataire" ToRole="Prestataire" FromRole="Intervention" />
+  </EntityType>
+  <EntityType Name="Localisation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="Edm.String" Nullable="false" MaxLength="9" ConcurrencyMode="Fixed" />
+    <Property Name="Longitude" Type="Edm.String" Nullable="false" MaxLength="10" ConcurrencyMode="Fixed" />
+    <Property Name="AdresseComplete" Type="Edm.String" MaxLength="200" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_ToLocalisation" ToRole="Client" FromRole="Localisation" />
+    <NavigationProperty Name="Prestataires" Relationship="LightSwitchApplication.FK_Prestataire_ToLocalisation" ToRole="Prestataire" FromRole="Localisation" />
+    <NavigationProperty Name="Zones" Relationship="LightSwitchApplication.FK_Zone_ToLocalisationNO" ToRole="Zone" FromRole="Localisation" />
+    <NavigationProperty Name="Zones1" Relationship="LightSwitchApplication.FK_Zone_ToLocalisationSE" ToRole="Zone" FromRole="Localisation" />
+  </EntityType>
+  <EntityType Name="Prestataire">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Prenom" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="EmailPro" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="EmailPerso" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Mobile" Type="Edm.String" MaxLength="20" ConcurrencyMode="Fixed" />
+    <Property Name="CompteSkype" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Localisation" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Interventions" Relationship="LightSwitchApplication.FK_Intervention_ToPrestataire" ToRole="Intervention" FromRole="Prestataire" />
+    <NavigationProperty Name="Localisation1" Relationship="LightSwitchApplication.FK_Prestataire_ToLocalisation" ToRole="Localisation" FromRole="Prestataire" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="LocalisationNO" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="LocalisationSE" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_ToZone" ToRole="Client" FromRole="Zone" />
+    <NavigationProperty Name="Localisation" Relationship="LightSwitchApplication.FK_Zone_ToLocalisationNO" ToRole="Localisation" FromRole="Zone" />
+    <NavigationProperty Name="Localisation1" Relationship="LightSwitchApplication.FK_Zone_ToLocalisationSE" ToRole="Localisation" FromRole="Zone" />
+  </EntityType>
+  <Association Name="FK_Intervention_ToClient">
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="1" />
+    <End Role="Intervention" Type="LightSwitchApplication.Intervention" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Intervention">
+        <PropertyRef Name="Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ToLocalisation">
+    <End Role="Localisation" Type="LightSwitchApplication.Localisation" Multiplicity="1" />
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Localisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestataire_ToLocalisation">
+    <End Role="Localisation" Type="LightSwitchApplication.Localisation" Multiplicity="1" />
+    <End Role="Prestataire" Type="LightSwitchApplication.Prestataire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prestataire">
+        <PropertyRef Name="Localisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zone_ToLocalisationNO">
+    <End Role="Localisation" Type="LightSwitchApplication.Localisation" Multiplicity="1" />
+    <End Role="Zone" Type="LightSwitchApplication.Zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zone">
+        <PropertyRef Name="LocalisationNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zone_ToLocalisationSE">
+    <End Role="Localisation" Type="LightSwitchApplication.Localisation" Multiplicity="1" />
+    <End Role="Zone" Type="LightSwitchApplication.Zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zone">
+        <PropertyRef Name="LocalisationSE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Intervention_ToPrestataire">
+    <End Role="Prestataire" Type="LightSwitchApplication.Prestataire" Multiplicity="1" />
+    <End Role="Intervention" Type="LightSwitchApplication.Intervention" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestataire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Intervention">
+        <PropertyRef Name="Prestataire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ToZone">
+    <End Role="Zone" Type="LightSwitchApplication.Zone" Multiplicity="1" />
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zone">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Zone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBPrestaConnectData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Clients" EntityType="LightSwitchApplication.Client" />
+    <EntitySet Name="Interventions" EntityType="LightSwitchApplication.Intervention" />
+    <EntitySet Name="Localisations" EntityType="LightSwitchApplication.Localisation" />
+    <EntitySet Name="Prestataires" EntityType="LightSwitchApplication.Prestataire" />
+    <EntitySet Name="Zones" EntityType="LightSwitchApplication.Zone" />
+    <AssociationSet Name="FK_Intervention_ToClient" Association="LightSwitchApplication.FK_Intervention_ToClient">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Intervention" EntitySet="Interventions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ToLocalisation" Association="LightSwitchApplication.FK_Client_ToLocalisation">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestataire_ToLocalisation" Association="LightSwitchApplication.FK_Prestataire_ToLocalisation">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Prestataire" EntitySet="Prestataires" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zone_ToLocalisationNO" Association="LightSwitchApplication.FK_Zone_ToLocalisationNO">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Zone" EntitySet="Zones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zone_ToLocalisationSE" Association="LightSwitchApplication.FK_Zone_ToLocalisationSE">
+      <End Role="Localisation" EntitySet="Localisations" />
+      <End Role="Zone" EntitySet="Zones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Intervention_ToPrestataire" Association="LightSwitchApplication.FK_Intervention_ToPrestataire">
+      <End Role="Prestataire" EntitySet="Prestataires" />
+      <End Role="Intervention" EntitySet="Interventions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ToZone" Association="LightSwitchApplication.FK_Client_ToZone">
+      <End Role="Zone" EntitySet="Zones" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
+      <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Prestataire">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nom"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Prenom"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailPro"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailPerso"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Mobile"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CompteSkype"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Interventions"
+        Association="FK_Intervention_ToPrestataire"
+        FromEnd="Prestataire"
+        ToEnd="Intervention" />
+      <NavigationProperty
+        Name="Localisation1"
+        Association="FK_Prestataire_ToLocalisation"
+        FromEnd="Prestataire"
+        ToEnd="Localisation" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Intervention_ToPrestataire">
+    <AssociationEnd
+      Name="Prestataire"
+      Multiplicity="One"
+      EntityType="Prestataire">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Intervention"
+      Multiplicity="Many"
+      EntityType="Intervention" />
+  </Association>
+  <EntityContainer
+    Name="DBPrestaConnectData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Prestataires"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Prestataire" />
+    <AssociationSet
+      Name="FK_Intervention_ToPrestataire"
+      Association="FK_Intervention_ToPrestataire">
+      <AssociationSetEnd
+        Name="Prestataire"
+        EntitySet="Prestataires" />
+      <AssociationSetEnd
+        Name="Intervention"
+        EntitySet="Interventions" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Prestataires_Single"
+      ReturnType="Prestataire">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Prestataires" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Prestataires_SingleOrDefault"
+      ReturnType="Prestataire">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Prestataires" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DBPrestaConnectDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Prestataires">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Prestataire" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Prestataire/Properties[Id]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nom"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Prestataire/Properties[Nom]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Prenom"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Prestataire/Properties[Prenom]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="EmailPro"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Prestataire/Properties[EmailPro]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="EmailPerso"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Prestataire/Properties[EmailPerso]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Mobile"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Prestataire/Properties[Mobile]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CompteSkype"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Prestataire/Properties[CompteSkype]" />
+        <SsdlForeignKeyProperty
+          Name="Localisation"
+          Nullable="False"
+          Type="int"
+          PropertyName="Localisation" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Intervention_ToPrestataire">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Intervention_ToPrestataire" />
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Intervention_ToPrestataire]/Members[Prestataire]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="DBPrestaConnectData/Members[FK_Intervention_ToPrestataire]/Members[Intervention]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Prestataire" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

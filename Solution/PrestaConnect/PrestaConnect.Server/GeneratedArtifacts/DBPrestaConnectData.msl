@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="DBPrestaConnectData" StorageEntityContainer="DBPrestaConnectDataStore">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interventions">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Intervention)">
+        <MappingFragment StoreEntitySet="Interventions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateDebut" ColumnName="DateDebut" />
+          <ScalarProperty Name="DateFin" ColumnName="DateFin" />
+          <ScalarProperty Name="Poste" ColumnName="Poste" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Prestataire" ColumnName="Prestataire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localisations">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Localisation)">
+        <MappingFragment StoreEntitySet="Localisations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="AdresseComplete" ColumnName="AdresseComplete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prestataires">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Prestataire)">
+        <MappingFragment StoreEntitySet="Prestataires">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="EmailPro" ColumnName="EmailPro" />
+          <ScalarProperty Name="EmailPerso" ColumnName="EmailPerso" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="CompteSkype" ColumnName="CompteSkype" />
+          <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Zone)">
+        <MappingFragment StoreEntitySet="Zones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="LocalisationNO" ColumnName="LocalisationNO" />
+          <ScalarProperty Name="LocalisationSE" ColumnName="LocalisationSE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
