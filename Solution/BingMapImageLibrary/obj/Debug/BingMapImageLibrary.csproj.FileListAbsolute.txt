@@ -1,0 +1,7 @@
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\Bin\Debug\BingMapImageLibrary.dll
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\Bin\Debug\BingMapImageLibrary.pdb
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\obj\Debug\BingMapImageLibrary.csprojResolveAssemblyReference.cache
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\obj\Debug\BingMapImage.g.cs
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\obj\Debug\BingMapImageLibrary.g.resources
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\obj\Debug\BingMapImageLibrary.dll
+C:\Developpement\GitRepository\PrestaConnectRepo\Solution\BingMapImageLibrary\obj\Debug\BingMapImageLibrary.pdb
