@@ -247,6 +247,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NomPrenom
+        {
+            get
+            {
+                return global::LightSwitchApplication.Prestataire.DetailsClass.GetValue(this, global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties.NomPrenom);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NomPrenom_Compute(ref string result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NomPrenom_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Intervention> Interventions
         {
             get
@@ -424,6 +442,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties.CompteSkype) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string> NomPrenom
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties.NomPrenom) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>;
                     }
                 }
                 
@@ -723,6 +749,28 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>.Entry
+                    NomPrenom = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>.Entry(
+                        "NomPrenom",
+                        global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties._NomPrenom_Stub,
+                        global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties._NomPrenom_Validate,
+                        global::LightSwitchApplication.Prestataire.DetailsClass.PropertySetProperties._NomPrenom_ComputeValue);
+                private static void _NomPrenom_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Prestataire.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>.Data> c, global::LightSwitchApplication.Prestataire.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NomPrenom, sf);
+                }
+                private static void _NomPrenom_Validate(global::LightSwitchApplication.Prestataire e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.NomPrenom_Validate(r);
+                }
+                private static string _NomPrenom_ComputeValue(global::LightSwitchApplication.Prestataire e)
+                {
+                    string value = default(string);
+                    e.NomPrenom_Compute(ref value);
+                    return value;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, global::LightSwitchApplication.Intervention>.Entry
                     Interventions = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, global::LightSwitchApplication.Intervention>.Entry(
                         "Interventions",
@@ -811,6 +859,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>.Data _CompteSkype;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, string>.Data _NomPrenom;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prestataire, global::LightSwitchApplication.Prestataire.DetailsClass, global::LightSwitchApplication.Intervention>.Data _Interventions;

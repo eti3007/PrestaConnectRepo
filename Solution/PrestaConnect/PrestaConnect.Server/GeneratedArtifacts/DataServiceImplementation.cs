@@ -37,6 +37,17 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Zone> FindZoneByLocalisation(string Latitude, string Longitude)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Zone> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.Zone>("Zones"),
+                    (z) => ((((z.Localisation.Latitude.CompareTo(Latitude) >= 0) && (z.Localisation1.Latitude.CompareTo(Latitude) <= 0)) && (z.Localisation.Longitude.CompareTo(Longitude) <= 0)) && (z.Localisation1.Longitude.CompareTo(Longitude) >= 0))),
+                (z) => z.Nom);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods

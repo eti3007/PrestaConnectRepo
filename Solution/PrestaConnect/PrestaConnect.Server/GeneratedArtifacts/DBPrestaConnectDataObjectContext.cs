@@ -767,6 +767,30 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AdresseComplete
+        {
+            get
+            {
+                return _AdresseComplete;
+            }
+            set
+            {
+                OnAdresseCompleteChanging(value);
+                ReportPropertyChanging("AdresseComplete");
+                _AdresseComplete = value;
+                ReportPropertyChanged("AdresseComplete");
+                OnAdresseCompleteChanged();
+            }
+        }
+        private global::System.String _AdresseComplete;
+        partial void OnAdresseCompleteChanging(global::System.String value);
+        partial void OnAdresseCompleteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Latitude
@@ -811,30 +835,6 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Longitude;
         partial void OnLongitudeChanging(global::System.String value);
         partial void OnLongitudeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String AdresseComplete
-        {
-            get
-            {
-                return _AdresseComplete;
-            }
-            set
-            {
-                OnAdresseCompleteChanging(value);
-                ReportPropertyChanging("AdresseComplete");
-                _AdresseComplete = value;
-                ReportPropertyChanged("AdresseComplete");
-                OnAdresseCompleteChanged();
-            }
-        }
-        private global::System.String _AdresseComplete;
-        partial void OnAdresseCompleteChanging(global::System.String value);
-        partial void OnAdresseCompleteChanged();
 
         #endregion
 

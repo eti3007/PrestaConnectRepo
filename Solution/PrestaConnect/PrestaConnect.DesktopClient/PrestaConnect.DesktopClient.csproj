@@ -226,18 +226,45 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\PrestaConnect.Server\DataSources\DBPrestaConnectData\Client.lsml.cs">
+      <Link>UserCode\Shared\Client.lsml.cs</Link>
+    </Compile>
     <Compile Include="..\PrestaConnect.Server\DataSources\DBPrestaConnectData\Localisation.lsml.cs">
       <Link>UserCode\Shared\Localisation.lsml.cs</Link>
     </Compile>
+    <Compile Include="..\PrestaConnect.Server\DataSources\DBPrestaConnectData\Prestataire.lsml.cs">
+      <Link>UserCode\Shared\Prestataire.lsml.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\CreateNewClient.lsml.cs">
+      <DependentUpon>CreateNewClient.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CreateNewIntervention.lsml.cs">
+      <DependentUpon>CreateNewIntervention.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CreateNewLocalisation.lsml.cs">
       <DependentUpon>CreateNewLocalisation.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CreateNewPrestataire.lsml.cs">
+      <DependentUpon>CreateNewPrestataire.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\CreateNewZone.lsml.cs">
       <DependentUpon>CreateNewZone.lsml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\ListDetailZone.lsml.cs">
-      <DependentUpon>ListDetailZone.lsml</DependentUpon>
+    <Compile Include="Screens\ListClient.lsml.cs">
+      <DependentUpon>ListClient.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ListInterventions.lsml.cs">
+      <DependentUpon>ListInterventions.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ListPrestataires.lsml.cs">
+      <DependentUpon>ListPrestataires.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ListZone.lsml.cs">
+      <DependentUpon>ListZone.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ListLocalisation.lsml.cs">
+      <DependentUpon>ListLocalisation.lsml</DependentUpon>
     </Compile>
     <Compile Include="UserCode\Shared\HttpBingMap.cs" />
   </ItemGroup>
@@ -246,14 +273,22 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <None Include="Properties\AppManifest.xml" />
+    <LightSwitchModel Include="Properties\DBPrestaConnectData\Localisations.lsml" />
+    <LightSwitchModel Include="Properties\DBPrestaConnectData\Prestataires.lsml" />
     <None Include="Properties\OutOfBrowserSettings.xml" />
     <ClientResource Include="Properties\Config.xml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\CreateNewZone.lsml" />
-    <LightSwitchModel Include="Screens\ListDetailZone.lsml" />
+    <LightSwitchModel Include="Screens\ListZone.lsml" />
     <LightSwitchModel Include="Screens\CreateNewLocalisation.lsml" />
+    <LightSwitchModel Include="Screens\ListLocalisation.lsml" />
+    <LightSwitchModel Include="Screens\ListClient.lsml" />
+    <LightSwitchModel Include="Screens\CreateNewClient.lsml" />
+    <LightSwitchModel Include="Screens\ListPrestataires.lsml" />
+    <LightSwitchModel Include="Screens\CreateNewPrestataire.lsml" />
+    <LightSwitchModel Include="Screens\ListInterventions.lsml" />
+    <LightSwitchModel Include="Screens\CreateNewIntervention.lsml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <_ClientBuildFile Include="default.htm">
       <SubFolder>
@@ -263,6 +298,15 @@
       <SubFolder>
       </SubFolder>
     </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BingMapImageLibrary\BingMapImageLibrary.csproj">
+      <Project>{4399c24e-ce4b-4a35-8b6a-92983c5b27fc}</Project>
+      <Name>BingMapImageLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

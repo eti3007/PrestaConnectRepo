@@ -252,6 +252,21 @@ namespace LightSwitchApplication
         partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FindZoneByLocalisation_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FindZoneByLocalisation_Executing(string Latitude, string Longitude);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FindZoneByLocalisation_PreprocessQuery(string Latitude, string Longitude, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Zone> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FindZoneByLocalisation_Executed(string Latitude, string Longitude, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Zone> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FindZoneByLocalisation_ExecuteFailed(string Latitude, string Longitude, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -683,6 +698,40 @@ namespace LightSwitchApplication
             private static void __SaveChanges_Failed(global::LightSwitchApplication.DBPrestaConnectDataService d, object[] args, global::System.Exception ex)
             {
                 d.SaveChanges_ExecuteFailed(ex);
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.DBPrestaConnectDataService, global::LightSwitchApplication.Zone>
+                __FindZoneByLocalisationEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.DBPrestaConnectDataService, global::LightSwitchApplication.Zone>(
+                    "FindZoneByLocalisation",
+                    global::LightSwitchApplication.DBPrestaConnectDataService.DetailsClass.__FindZoneByLocalisation_CanExecute,
+                    global::LightSwitchApplication.DBPrestaConnectDataService.DetailsClass.__FindZoneByLocalisation_Executing,
+                    global::LightSwitchApplication.DBPrestaConnectDataService.DetailsClass.__FindZoneByLocalisation_Executed,
+                    global::LightSwitchApplication.DBPrestaConnectDataService.DetailsClass.__FindZoneByLocalisation_Failed,
+                    global::LightSwitchApplication.DBPrestaConnectDataService.DetailsClass.__FindZoneByLocalisation_PreprocessQuery);
+            private static bool __FindZoneByLocalisation_CanExecute(global::LightSwitchApplication.DBPrestaConnectDataService d, bool r)
+            {
+                d.FindZoneByLocalisation_CanExecute(ref r);
+                return r;
+            }
+            private static void __FindZoneByLocalisation_Executing(global::LightSwitchApplication.DBPrestaConnectDataService d, object[] args)
+            {
+                d.FindZoneByLocalisation_Executing((string)args[0], (string)args[1]);
+            }
+            private static void __FindZoneByLocalisation_Executed(global::LightSwitchApplication.DBPrestaConnectDataService d, object[] args)
+            {
+                d.FindZoneByLocalisation_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Zone>)args[2]);
+            }
+            private static void __FindZoneByLocalisation_Failed(global::LightSwitchApplication.DBPrestaConnectDataService d, object[] args, global::System.Exception ex)
+            {
+                d.FindZoneByLocalisation_ExecuteFailed((string)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __FindZoneByLocalisation_PreprocessQuery(global::LightSwitchApplication.DBPrestaConnectDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Zone> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Zone>)args[2];
+                d.FindZoneByLocalisation_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                return query;
             }
     
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]

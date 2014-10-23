@@ -321,6 +321,20 @@ namespace LightSwitchApplication
             return this.Details.Methods.Zones_SingleOrDefault.CreateInvocation(Id).Execute();
         }
         
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="Latitude">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="Longitude">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Zone> FindZoneByLocalisation(string Latitude, string Longitude)
+        {
+            return this.Details.Methods.FindZoneByLocalisation.CreateInvocation(Latitude, Longitude).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -446,6 +460,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.DBPrestaConnectData.DetailsClass.MethodSetProperties.Zones_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone> FindZoneByLocalisation
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DBPrestaConnectData.DetailsClass.MethodSetProperties.FindZoneByLocalisation) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>;
                     }
                 }
                 
@@ -610,6 +632,16 @@ namespace LightSwitchApplication
                     c(d, ref d._Zones_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>.Entry
+                    FindZoneByLocalisation = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>.Entry(
+                        "FindZoneByLocalisation",
+                        global::LightSwitchApplication.DBPrestaConnectData.DetailsClass.MethodSetProperties._FindZoneByLocalisation_Stub);
+                private static void _FindZoneByLocalisation_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>.Data> c, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FindZoneByLocalisation, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -714,6 +746,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>.Data _Zones_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.DBPrestaConnectData, global::LightSwitchApplication.DBPrestaConnectData.DetailsClass, global::LightSwitchApplication.Zone>.Data _FindZoneByLocalisation;
             
         }
     

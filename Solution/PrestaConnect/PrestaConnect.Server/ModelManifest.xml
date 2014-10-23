@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Clients.lsml" Checksum="EDD046645D87A7A55E4C85E2AB6FEBCE472A367AD62BA56520A64F71158EB66A" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Interventions.lsml" Checksum="92466C7940E173B55E61039CFA519DD18D59BEB50C096368396C7A2496C80DC1" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Localisations.lsml" Checksum="C702E854C16D996BD439243E9FE6820F15EFEA4E1F1989FAC7361A0896C0CC64" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Prestataires.lsml" Checksum="8CBE723D0E8FBD8C015A2F992FE73DD2E6359867B4DE3E8AD3D82BB5E85D6013" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Zones.lsml" Checksum="E4DA28536519706DEA8145E89D942829CEC8991272C9C91176237472EBCE26AE" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\Properties\DataSources\DBPrestaConnectData.lsml" Checksum="6ADF82951E55F340508265A0321B3018EAA2EEC04A79FE4D02F4862B552302B2" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\Properties\Service.lsml" Checksum="3756E0D206B51110B66C1C3669FEE28935560546AD38F27784C23B39F35F4EA3" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\QueryLocalisationByAdresse.lsml" Checksum="9AA66C1A4346F8A6F7E74485B04E1B4D83F31A3BEA9CE88268DAE4E8C0794E28" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Clients.lsml" Checksum="EDD046645D87A7A55E4C85E2AB6FEBCE472A367AD62BA56520A64F71158EB66A" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Interventions.lsml" Checksum="92466C7940E173B55E61039CFA519DD18D59BEB50C096368396C7A2496C80DC1" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Localisations.lsml" Checksum="A9982CA506B9A11B234F466FCB3A074AC3C1C0DA653DDC1FDA06A8545381BD1F" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Prestataires.lsml" Checksum="D4B58BDAD871A9A79B8EE2D4B801976400FA12628604D5917DFB5445F2E5ED8D" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\Zones.lsml" Checksum="E4DA28536519706DEA8145E89D942829CEC8991272C9C91176237472EBCE26AE" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\DataSources\DBPrestaConnectData\FindZoneByLocalisation.lsml" Checksum="938EE7D60A3F87D2BB37951098C4C734D8EDE5530E3E63ADB94378A90F3969D6" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\Properties\DataSources\DBPrestaConnectData.lsml" Checksum="6ADF82951E55F340508265A0321B3018EAA2EEC04A79FE4D02F4862B552302B2" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.Server\Properties\Service.lsml" Checksum="3756E0D206B51110B66C1C3669FEE28935560546AD38F27784C23B39F35F4EA3" />
   </Documents>
 </ModelDocumentManifest>

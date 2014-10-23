@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestaConnect.Server", "Pre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestaConnect.DesktopClient", "PrestaConnect.DesktopClient\PrestaConnect.DesktopClient.csproj", "{9F3A5EB1-5B2B-4CB2-9C0B-6D601A304EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingMapImageLibrary", "..\BingMapImageLibrary\BingMapImageLibrary.csproj", "{4399C24E-CE4B-4A35-8B6A-92983C5B27FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9F3A5EB1-5B2B-4CB2-9C0B-6D601A304EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3A5EB1-5B2B-4CB2-9C0B-6D601A304EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3A5EB1-5B2B-4CB2-9C0B-6D601A304EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4399C24E-CE4B-4A35-8B6A-92983C5B27FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4399C24E-CE4B-4A35-8B6A-92983C5B27FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4399C24E-CE4B-4A35-8B6A-92983C5B27FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4399C24E-CE4B-4A35-8B6A-92983C5B27FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,6 +26,14 @@
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
+        Name="AdresseComplete"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Latitude"
         PropertyType=":String">
         <EntityProperty.Attributes>
@@ -44,11 +52,13 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="AdresseComplete"
+        Name="UrlBingMapImage"
+        IsReadOnly="True"
         PropertyType=":String?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="200" />
+          <Computed />
+          <NotSearchable />
+          <NotSortable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

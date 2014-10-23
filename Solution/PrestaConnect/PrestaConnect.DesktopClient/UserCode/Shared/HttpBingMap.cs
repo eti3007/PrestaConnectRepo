@@ -39,6 +39,7 @@ namespace LightSwitchApplication
         const int BUFFER_SIZE = 1024;
         const int DefaultTimeout = 2 * 60 * 1000; // 2 minutes timeout
         const string Url = @"http://dev.virtualearth.net/REST/v1/Locations?q={0}&key={1}";
+        const string CoordinatePosition = "\"coordinates\":[";
 
         // Abort the request if the timer fires.
         private static void TimeoutCallback(object state, bool timedOut)
@@ -60,7 +61,21 @@ namespace LightSwitchApplication
         public HttpBingMap(string key, string query) { this.Key = key; this.Query = query; }
 
 
-        public void GetResponse()
+        public string[] GetCoordonnees()
+        {
+            this.GetResponse();
+
+            if (this.ResponseData.StartsWith("Erreur")) return null;
+            else {
+                int posA = this.ResponseData.IndexOf(CoordinatePosition) + CoordinatePosition.Length;
+                int posB = this.ResponseData.Substring(posA).IndexOf("]") + posA;
+                string[] coord = this.ResponseData.Substring(posA, (posB - posA)).Split(Convert.ToChar(","));
+                if (coord.Length == 2) return coord;
+                else return null;
+            }
+        }
+
+        private void GetResponse()
         {
             try
             {

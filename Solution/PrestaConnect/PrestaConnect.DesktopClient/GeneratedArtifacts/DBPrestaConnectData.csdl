@@ -30,9 +30,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdresseComplete" Type="Edm.String" MaxLength="200" ConcurrencyMode="Fixed" />
     <Property Name="Latitude" Type="Edm.String" Nullable="false" MaxLength="9" ConcurrencyMode="Fixed" />
     <Property Name="Longitude" Type="Edm.String" Nullable="false" MaxLength="10" ConcurrencyMode="Fixed" />
-    <Property Name="AdresseComplete" Type="Edm.String" MaxLength="200" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_ToLocalisation" ToRole="Client" FromRole="Localisation" />
     <NavigationProperty Name="Prestataires" Relationship="LightSwitchApplication.FK_Prestataire_ToLocalisation" ToRole="Prestataire" FromRole="Localisation" />
     <NavigationProperty Name="Zones" Relationship="LightSwitchApplication.FK_Zone_ToLocalisationNO" ToRole="Zone" FromRole="Localisation" />
@@ -183,6 +183,10 @@
       <End Role="Zone" EntitySet="Zones" />
       <End Role="Client" EntitySet="Clients" />
     </AssociationSet>
+    <FunctionImport Name="FindZoneByLocalisation" ReturnType="Collection(LightSwitchApplication.Zone)" EntitySet="Zones" m:HttpMethod="GET">
+      <Parameter Name="Latitude" Type="Edm.String" Mode="In" />
+      <Parameter Name="Longitude" Type="Edm.String" Mode="In" />
+    </FunctionImport>
     <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
       <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
     </FunctionImport>

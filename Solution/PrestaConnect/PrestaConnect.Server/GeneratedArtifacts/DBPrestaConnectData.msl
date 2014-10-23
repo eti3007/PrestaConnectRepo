@@ -27,9 +27,9 @@
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Localisation)">
         <MappingFragment StoreEntitySet="Localisations">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AdresseComplete" ColumnName="AdresseComplete" />
           <ScalarProperty Name="Latitude" ColumnName="Latitude" />
           <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-          <ScalarProperty Name="AdresseComplete" ColumnName="AdresseComplete" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

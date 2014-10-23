@@ -103,6 +103,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string AdresseComplete
+        {
+            get
+            {
+                return global::LightSwitchApplication.Localisation.DetailsClass.GetValue(this, global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete);
+            }
+            set
+            {
+                global::LightSwitchApplication.Localisation.DetailsClass.SetValue(this, global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AdresseComplete_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AdresseComplete_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AdresseComplete_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string Latitude
         {
             get
@@ -151,24 +175,18 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string AdresseComplete
+        public string UrlBingMapImage
         {
             get
             {
-                return global::LightSwitchApplication.Localisation.DetailsClass.GetValue(this, global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete);
-            }
-            set
-            {
-                global::LightSwitchApplication.Localisation.DetailsClass.SetValue(this, global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete, value);
+                return global::LightSwitchApplication.Localisation.DetailsClass.GetValue(this, global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.UrlBingMapImage);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AdresseComplete_IsReadOnly(ref bool result);
+        partial void UrlBingMapImage_Compute(ref string result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AdresseComplete_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AdresseComplete_Changed();
+        partial void UrlBingMapImage_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
         /// <summary>
         /// No Modeled Description Available
@@ -352,6 +370,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string> AdresseComplete
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string> Latitude
                 {
                     get
@@ -368,11 +394,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string> AdresseComplete
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string> UrlBingMapImage
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.AdresseComplete) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties.UrlBingMapImage) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>;
                     }
                 }
                 
@@ -415,9 +441,9 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int Id { get; }
+                new string AdresseComplete { get; set; }
                 new string Latitude { get; set; }
                 new string Longitude { get; set; }
-                new string AdresseComplete { get; set; }
                 new global::System.Collections.IEnumerable Clients { get; }
                 new global::System.Collections.IEnumerable Prestataires { get; }
                 new global::System.Collections.IEnumerable Zones { get; }
@@ -462,6 +488,43 @@ namespace LightSwitchApplication
                 private static void _Id_OnValueChanged(global::LightSwitchApplication.Localisation e)
                 {
                     e.Id_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry
+                    AdresseComplete = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry(
+                        "AdresseComplete",
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_Stub,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_Validate,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_GetImplementationValue,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_SetImplementationValue,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_OnValueChanged);
+                private static void _AdresseComplete_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Localisation.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data> c, global::LightSwitchApplication.Localisation.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AdresseComplete, sf);
+                }
+                private static bool _AdresseComplete_ComputeIsReadOnly(global::LightSwitchApplication.Localisation e)
+                {
+                    bool result = false;
+                    e.AdresseComplete_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _AdresseComplete_Validate(global::LightSwitchApplication.Localisation e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.AdresseComplete_Validate(r);
+                }
+                private static string _AdresseComplete_GetImplementationValue(global::LightSwitchApplication.Localisation.DetailsClass d)
+                {
+                    return d.ImplementationEntity.AdresseComplete;
+                }
+                private static void _AdresseComplete_SetImplementationValue(global::LightSwitchApplication.Localisation.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.AdresseComplete = v;
+                }
+                private static void _AdresseComplete_OnValueChanged(global::LightSwitchApplication.Localisation e)
+                {
+                    e.AdresseComplete_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -539,40 +602,25 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry
-                    AdresseComplete = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry(
-                        "AdresseComplete",
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_Stub,
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_Validate,
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_GetImplementationValue,
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_SetImplementationValue,
-                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._AdresseComplete_OnValueChanged);
-                private static void _AdresseComplete_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Localisation.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data> c, global::LightSwitchApplication.Localisation.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry
+                    UrlBingMapImage = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Entry(
+                        "UrlBingMapImage",
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._UrlBingMapImage_Stub,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._UrlBingMapImage_Validate,
+                        global::LightSwitchApplication.Localisation.DetailsClass.PropertySetProperties._UrlBingMapImage_ComputeValue);
+                private static void _UrlBingMapImage_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Localisation.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data> c, global::LightSwitchApplication.Localisation.DetailsClass d, object sf)
                 {
-                    c(d, ref d._AdresseComplete, sf);
+                    c(d, ref d._UrlBingMapImage, sf);
                 }
-                private static bool _AdresseComplete_ComputeIsReadOnly(global::LightSwitchApplication.Localisation e)
+                private static void _UrlBingMapImage_Validate(global::LightSwitchApplication.Localisation e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    bool result = false;
-                    e.AdresseComplete_IsReadOnly(ref result);
-                    return result;
+                    e.UrlBingMapImage_Validate(r);
                 }
-                private static void _AdresseComplete_Validate(global::LightSwitchApplication.Localisation e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static string _UrlBingMapImage_ComputeValue(global::LightSwitchApplication.Localisation e)
                 {
-                    e.AdresseComplete_Validate(r);
-                }
-                private static string _AdresseComplete_GetImplementationValue(global::LightSwitchApplication.Localisation.DetailsClass d)
-                {
-                    return d.ImplementationEntity.AdresseComplete;
-                }
-                private static void _AdresseComplete_SetImplementationValue(global::LightSwitchApplication.Localisation.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.AdresseComplete = v;
-                }
-                private static void _AdresseComplete_OnValueChanged(global::LightSwitchApplication.Localisation e)
-                {
-                    e.AdresseComplete_Changed();
+                    string value = default(string);
+                    e.UrlBingMapImage_Compute(ref value);
+                    return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -661,13 +709,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, int>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data _AdresseComplete;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data _Latitude;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data _Longitude;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data _AdresseComplete;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, string>.Data _UrlBingMapImage;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Localisation, global::LightSwitchApplication.Localisation.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients;

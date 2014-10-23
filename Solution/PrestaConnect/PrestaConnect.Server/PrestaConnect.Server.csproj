@@ -191,8 +191,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\DBPrestaConnectData\Client.lsml.cs">
+      <DependentUpon>Clients.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\DBPrestaConnectData\Localisation.lsml.cs">
       <DependentUpon>Localisations.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\DBPrestaConnectData\Prestataire.lsml.cs">
+      <DependentUpon>Prestataires.lsml</DependentUpon>
     </Compile>
     <Compile Include="DataSources\DBPrestaConnectData\_DBPrestaConnectDataService.lsml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -212,6 +218,9 @@
     <LightSwitchModel Include="DataSources\DBPrestaConnectData\Prestataires.lsml" />
     <LightSwitchModel Include="DataSources\DBPrestaConnectData\Zones.lsml" />
     <LightSwitchModel Include="Properties\DataSources\DBPrestaConnectData.lsml" />
+    <LightSwitchModel Include="DataSources\DBPrestaConnectData\FindZoneByLocalisation.lsml">
+      <DependentUpon>Zones.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

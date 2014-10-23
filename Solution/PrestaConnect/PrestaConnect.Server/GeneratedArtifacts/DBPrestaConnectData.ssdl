@@ -60,9 +60,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AdresseComplete" Type="nvarchar" MaxLength="200" />
     <Property Name="Latitude" Type="nvarchar" Nullable="false" MaxLength="9" />
     <Property Name="Longitude" Type="nvarchar" Nullable="false" MaxLength="10" />
-    <Property Name="AdresseComplete" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="Prestataire">
     <Key>

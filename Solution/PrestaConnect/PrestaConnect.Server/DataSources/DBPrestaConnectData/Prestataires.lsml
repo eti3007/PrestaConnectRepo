@@ -26,6 +26,13 @@
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
+        Name="NomPrenom"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Nom"
         PropertyType=":String">
         <EntityProperty.Attributes>
@@ -45,7 +52,7 @@
       </EntityProperty>
       <EntityProperty
         Name="EmailPro"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="100" />
@@ -53,7 +60,7 @@
       </EntityProperty>
       <EntityProperty
         Name="EmailPerso"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="100" />
@@ -61,10 +68,16 @@
       </EntityProperty>
       <EntityProperty
         Name="Mobile"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="20" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@PhoneNumberValidation">
+            <Property
+              Name="Formats"
+              Value="C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN;NN NN NN NN NN" />
+          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

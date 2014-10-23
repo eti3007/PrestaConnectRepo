@@ -9,18 +9,18 @@ using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
 namespace LightSwitchApplication
 {
-    public partial class ListDetailZone
+    public partial class ListZone
     {
-        partial void ZoneListAddAndEditNew_CanExecute(ref bool result)
-        {
-            // Write your code here.
-
-        }
-
         partial void ZoneListAddAndEditNew_Execute()
         {
             // Write your code here.
-            Application.ShowCreateNewZone();
+            Application.ShowCreateNewZone(null);
+        }
+
+        partial void ZoneListEditSelected_Execute()
+        {
+            // Write your code here.
+            Application.ShowCreateNewZone(this.Zones.SelectedItem.Id);
         }
     }
 }

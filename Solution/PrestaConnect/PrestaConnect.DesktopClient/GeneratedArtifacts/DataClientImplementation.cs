@@ -250,6 +250,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Id");
         }
         
+        partial void OnAdresseCompleteChanged()
+        {
+            this.___OnPropertyChanged("AdresseComplete");
+        }
+        
         partial void OnLatitudeChanged()
         {
             this.___OnPropertyChanged("Latitude");
@@ -258,11 +263,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnLongitudeChanged()
         {
             this.___OnPropertyChanged("Longitude");
-        }
-        
-        partial void OnAdresseCompleteChanged()
-        {
-            this.___OnPropertyChanged("AdresseComplete");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Localisation.DetailsClass.IImplementation.Clients

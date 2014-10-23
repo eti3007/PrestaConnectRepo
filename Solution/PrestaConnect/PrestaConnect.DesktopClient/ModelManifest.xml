@@ -1,10 +1,19 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Client.lsml" Checksum="884F540036FD1F81B3F0E374B9F7E5608671B1AC783B0A64F2CF1340AB4D5371" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Proxies.lsml" Checksum="5515037DE5C2EF98841E07BA1CB1F4469DCE859279B8EE138D85A8A47C9D5610" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewZone.lsml" Checksum="EA5D760DCFB09F00C119842A29D51893754248AA2A8EAD12A8ECF6EB5BFA811C" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListDetailZone.lsml" Checksum="6DE62AAFF6DE854F459F89889EE80BF9410053E8B23CFD303E5C69C64D32F7C6" />
-    <Document FullPath="C:\Developpement\PrestaConnect\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewLocalisation.lsml" Checksum="28616B84255D6DF2F31B486FD93B681170648FE11D83CF1FA64E30D7B6AE64F7" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Client.lsml" Checksum="B34C11B919DD15F9A0E8F96A5C62012386CCF48C22D3B30790294369523CE53D" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\DBPrestaConnectData\Localisations.lsml" Checksum="292CFB0020AFE78724A2E3A28FD248FF9EEC953A38BA31EFA8640F417A8B5088" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\DBPrestaConnectData\Prestataires.lsml" Checksum="9E82D7C18A6AE785CEDD3BAC1F851C74005AA35B4CB31B437DF63799D9401448" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Properties\Proxies.lsml" Checksum="AB5AD55B3ED0DA30A48F9D78C13012B794B7E279E3529A8D4D7E59D59160A780" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewClient.lsml" Checksum="D8D23DB7A56FEDF5A681FDB61C316F2AC7F3A0DC14FACA12A362356D7D80ACE8" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewIntervention.lsml" Checksum="18FF85B785A92C646EA623CF44D43DC96549AF5A42D1404AE2F812022E65D37B" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewLocalisation.lsml" Checksum="914DE79BE75D85349A75B9C30B1A4DF2BA80C9A1EC46F863A4CD31F196F582F5" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewPrestataire.lsml" Checksum="90571A00FE95F5100A4E46BDF4EF2B23E40D5C9103B1B8E5FAD939F52BE20672" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\CreateNewZone.lsml" Checksum="CF8E4F6B4C8EF0DD785DFA610B367E86460AD09CEDACBED98FF785CA4838BB27" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListClient.lsml" Checksum="28AF71C99B42D3A9002D8DE07DFC7F8D1A2F6958DEA03DDB0E4AFD0C3B7A340A" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListInterventions.lsml" Checksum="BEA263D4B09D02FB2CFC05CF2ABC3A6105DD9FA1E6AECEB022F0358A715D1F14" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListLocalisation.lsml" Checksum="656DEEE6A517BC6AD33B8E677DDC864A57098E01302E7FB0739810EC234793F6" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListPrestataires.lsml" Checksum="1C9994DCCF7DDAB4FE79E0C53B15678E84AFF9B087458DB92C6E1EA4342B0BFA" />
+    <Document FullPath="C:\Developpement\GitRepository\PrestaConnectRepo\Solution\PrestaConnect\PrestaConnect.DesktopClient\Screens\ListZone.lsml" Checksum="23C42A52EE1FA38731C4C84AC552D53A1FF30788EF5099942D40ECD3D63B5383" />
   </Documents>
 </ModelDocumentManifest>

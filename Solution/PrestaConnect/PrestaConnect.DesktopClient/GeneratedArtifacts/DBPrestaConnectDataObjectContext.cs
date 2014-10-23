@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 09/09/2014 23:14:36
+// Generation date: 23/10/2014 23:26:47
 namespace LightSwitchApplication.Implementation
 {
     
@@ -220,11 +220,11 @@ namespace LightSwitchApplication.Implementation
                 "1\" Relationship=\"LightSwitchApplication.FK_Intervention_ToPrestataire\" ToRole=\"P" +
                 "restataire\" FromRole=\"Intervention\" /></EntityType><EntityType Name=\"Localisatio" +
                 "n\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Null" +
-                "able=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Latit" +
-                "ude\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"9\" ConcurrencyMode=\"Fixed\" />" +
-                "<Property Name=\"Longitude\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"10\" Con" +
-                "currencyMode=\"Fixed\" /><Property Name=\"AdresseComplete\" Type=\"Edm.String\" MaxLen" +
-                "gth=\"200\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Clients\" Relations" +
+                "able=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Adres" +
+                "seComplete\" Type=\"Edm.String\" MaxLength=\"200\" ConcurrencyMode=\"Fixed\" /><Propert" +
+                "y Name=\"Latitude\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"9\" ConcurrencyMo" +
+                "de=\"Fixed\" /><Property Name=\"Longitude\" Type=\"Edm.String\" Nullable=\"false\" MaxLe" +
+                "ngth=\"10\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Clients\" Relations" +
                 "hip=\"LightSwitchApplication.FK_Client_ToLocalisation\" ToRole=\"Client\" FromRole=\"" +
                 "Localisation\" /><NavigationProperty Name=\"Prestataires\" Relationship=\"LightSwitc" +
                 "hApplication.FK_Prestataire_ToLocalisation\" ToRole=\"Prestataire\" FromRole=\"Local" +
@@ -318,10 +318,13 @@ namespace LightSwitchApplication.Implementation
                 "=\"Prestataires\" /><End Role=\"Intervention\" EntitySet=\"Interventions\" /></Associa" +
                 "tionSet><AssociationSet Name=\"FK_Client_ToZone\" Association=\"LightSwitchApplicat" +
                 "ion.FK_Client_ToZone\"><End Role=\"Zone\" EntitySet=\"Zones\" /><End Role=\"Client\" En" +
-                "titySet=\"Clients\" /></AssociationSet><FunctionImport Name=\"Microsoft_LightSwitch" +
-                "_GetCanInformation\" ReturnType=\"Edm.String\" m:HttpMethod=\"GET\"><Parameter Name=\"" +
-                "dataServiceMembers\" Type=\"Edm.String\" Mode=\"In\" /></FunctionImport></EntityConta" +
-                "iner></Schema></edmx:DataServices></edmx:Edmx>";
+                "titySet=\"Clients\" /></AssociationSet><FunctionImport Name=\"FindZoneByLocalisatio" +
+                "n\" ReturnType=\"Collection(LightSwitchApplication.Zone)\" EntitySet=\"Zones\" m:Http" +
+                "Method=\"GET\"><Parameter Name=\"Latitude\" Type=\"Edm.String\" Mode=\"In\" /><Parameter" +
+                " Name=\"Longitude\" Type=\"Edm.String\" Mode=\"In\" /></FunctionImport><FunctionImport" +
+                " Name=\"Microsoft_LightSwitch_GetCanInformation\" ReturnType=\"Edm.String\" m:HttpMe" +
+                "thod=\"GET\"><Parameter Name=\"dataServiceMembers\" Type=\"Edm.String\" Mode=\"In\" /></" +
+                "FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -950,6 +953,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnIdChanging(int value);
         partial void OnIdChanged();
         /// <summary>
+        /// There are no comments for Property AdresseComplete in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string AdresseComplete
+        {
+            get
+            {
+                return this._AdresseComplete;
+            }
+            set
+            {
+                this.OnAdresseCompleteChanging(value);
+                if (object.Equals(this.AdresseComplete, value))
+                {
+                    return;
+                }
+                this._AdresseComplete = value;
+                this.OnAdresseCompleteChanged();
+                this.OnPropertyChanged("AdresseComplete");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _AdresseComplete;
+        partial void OnAdresseCompleteChanging(string value);
+        partial void OnAdresseCompleteChanged();
+        /// <summary>
         /// There are no comments for Property Latitude in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1001,32 +1030,6 @@ namespace LightSwitchApplication.Implementation
         private string _Longitude;
         partial void OnLongitudeChanging(string value);
         partial void OnLongitudeChanged();
-        /// <summary>
-        /// There are no comments for Property AdresseComplete in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string AdresseComplete
-        {
-            get
-            {
-                return this._AdresseComplete;
-            }
-            set
-            {
-                this.OnAdresseCompleteChanging(value);
-                if (object.Equals(this.AdresseComplete, value))
-                {
-                    return;
-                }
-                this._AdresseComplete = value;
-                this.OnAdresseCompleteChanged();
-                this.OnPropertyChanged("AdresseComplete");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _AdresseComplete;
-        partial void OnAdresseCompleteChanging(string value);
-        partial void OnAdresseCompleteChanged();
         /// <summary>
         /// There are no comments for Clients in the schema.
         /// </summary>

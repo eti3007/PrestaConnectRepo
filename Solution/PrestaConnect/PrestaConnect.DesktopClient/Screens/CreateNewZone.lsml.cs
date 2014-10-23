@@ -12,23 +12,27 @@ namespace LightSwitchApplication
 {
     public partial class CreateNewZone
     {
-        partial void CreateNewZone_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+        partial void CreateNewZone_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             // Write your code here.
-            this.ZoneProperty = new Zone();
+            if (ZoneId.HasValue) {
+                this.ZoneProperty = this.DataWorkspace.DBPrestaConnectData.Zones_Single(ZoneId.Value);
+                this.DisplayName = "Edit Zone";
+            }
+            else this.ZoneProperty = new Zone();
         }
 
         partial void CreateNewZone_Saved()
         {
             // Write your code here.
             this.Close(false);
-            Application.Current.ShowDefaultScreen(this.ZoneProperty);
+            Application.Current.ShowListZone();
         }
 
         partial void CreateLocalisationNO_Execute()
         {
             // Write your code here.
-            Application.Current.ShowCreateNewLocalisation();
+            Application.Current.ShowCreateNewLocalisation(null);
         }
     }
 }

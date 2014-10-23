@@ -113,12 +113,31 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
+                  Name="LatitudeNO"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Latitude NO" />
+                    <Description
+                      Value="Latitude Nord Ouest" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Localisation/Properties[Latitude]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="LongitudeNO"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Longitude Nord-Ouest" />
+                      Value="Longitude NO" />
                     <Description
                       Value="Longitude Nord-Ouest" />
                   </ContentItem.Attributes>
@@ -127,23 +146,6 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="Localisation/Properties[Longitude]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="AdresseCompleteNO"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Adresse" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Localisation/Properties[AdresseComplete]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -214,31 +216,37 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
+                  Name="LatitudeSE"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Latitude SE" />
+                    <Description
+                      Value="Latitude Sud Est" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Localisation/Properties[Latitude]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="LongitudeSE"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Longitude Sud-Est" />
+                      Value="Longitude SE" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
                           Member="Localisation/Properties[Longitude]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="AdresseCompleteSE"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Localisation/Properties[AdresseComplete]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -351,6 +359,13 @@
       <ScreenProperty
         Name="ZoneProperty"
         PropertyType="Zone" />
+      <ScreenProperty
+        Name="ZoneId"
+        PropertyType=":Int32?">
+        <ScreenProperty.Attributes>
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>
@@ -360,6 +375,9 @@
         <ShowScreenMethod
           TargetScreen="CreateNewZone" />
       </ApplicationMethod.Attributes>
+      <ApplicationMethodParameter
+        Name="ZoneId"
+        ParameterType=":Int32?" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

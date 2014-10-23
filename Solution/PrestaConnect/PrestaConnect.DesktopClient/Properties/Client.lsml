@@ -40,29 +40,71 @@
       Name="ScreenCommandShowCreateNewZone"
       Target="!module/Methods[ShowCreateNewZone]" />
     <ApplicationCommand
-      Name="ScreenCommandShowListDetailZone"
-      Target="!module/Methods[ShowListDetailZone]" />
+      Name="ScreenCommandShowListZone"
+      Target="!module/Methods[ShowListZone]" />
     <ApplicationCommand
       Name="ScreenCommandShowCreateNewLocalisation"
       Target="!module/Methods[ShowCreateNewLocalisation]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowListLocalisation"
+      Target="!module/Methods[ShowListLocalisation]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowListClient"
+      Target="!module/Methods[ShowListClient]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewClient"
+      Target="!module/Methods[ShowCreateNewClient]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowListPrestataires"
+      Target="!module/Methods[ShowListPrestataires]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewPrestataire"
+      Target="!module/Methods[ShowCreateNewPrestataire]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowListInterventions"
+      Target="!module/Methods[ShowListInterventions]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowCreateNewIntervention"
+      Target="!module/Methods[ShowCreateNewIntervention]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
       Name="Tasks"
-      DefaultItem="!module/NavigationItems[Tasks]/Children[ListDetailZone]">
+      DefaultItem="!module/NavigationItems[Tasks]/Children[ListInterventions]">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="Tasks" />
       </ApplicationNavigationGroup.Attributes>
       <ApplicationNavigationLink
-        Name="ListDetailZone"
-        Command="!module/Commands[ScreenCommandShowListDetailZone]" />
+        Name="ListInterventions"
+        Command="!module/Commands[ScreenCommandShowListInterventions]" />
+      <ApplicationNavigationLink
+        Name="ListPrestataires"
+        Command="!module/Commands[ScreenCommandShowListPrestataires]" />
+      <ApplicationNavigationLink
+        Name="ListClient"
+        Command="!module/Commands[ScreenCommandShowListClient]" />
+      <ApplicationNavigationLink
+        Name="ListZone"
+        Command="!module/Commands[ScreenCommandShowListZone]" />
+      <ApplicationNavigationLink
+        Name="ListLocalisation"
+        Command="!module/Commands[ScreenCommandShowListLocalisation]" />
       <ApplicationNavigationLink
         Name="CreateNewZone"
         Command="!module/Commands[ScreenCommandShowCreateNewZone]" />
       <ApplicationNavigationLink
         Name="CreateNewLocalisation"
         Command="!module/Commands[ScreenCommandShowCreateNewLocalisation]" />
+      <ApplicationNavigationLink
+        Name="CreateNewClient"
+        Command="!module/Commands[ScreenCommandShowCreateNewClient]" />
+      <ApplicationNavigationLink
+        Name="CreateNewPrestataire"
+        Command="!module/Commands[ScreenCommandShowCreateNewPrestataire]" />
+      <ApplicationNavigationLink
+        Name="CreateNewIntervention"
+        Command="!module/Commands[ScreenCommandShowCreateNewIntervention]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="Administration">
