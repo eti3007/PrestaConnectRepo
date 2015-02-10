@@ -4198,6 +4198,7 @@
         <ContentItem.CommandItems>
           <ContentItem
             Name="Save"
+            IsHidden="True"
             Kind="Command">
             <ContentItem.DataSource>
               <ScreenExpressionTree>
@@ -5294,6 +5295,7 @@
         <ContentItem.CommandItems>
           <ContentItem
             Name="Save"
+            IsHidden="True"
             Kind="Command">
             <ContentItem.DataSource>
               <ScreenExpressionTree>

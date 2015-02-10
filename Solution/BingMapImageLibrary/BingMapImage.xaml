@@ -9,7 +9,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <WebBrowser Source="{Binding Screen.UrlBingMapImageParameter}"/>
+        <Image Source="{Binding Screen.UrlBingMapImageParameter}"/>
+        <!--<WebBrowser Source="{Binding Screen.UrlBingMapImageParameter}"/>-->
     </Grid>
     <!--Binding Screen.LocalisationProperty.UrlBingMapImage-->
 </UserControl>
